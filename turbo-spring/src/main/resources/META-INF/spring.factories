@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ds.young.turbo.spring.annotation.TurboConsumerAutoConfiguration

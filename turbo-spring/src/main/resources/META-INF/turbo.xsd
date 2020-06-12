@@ -1,0 +1,104 @@
+<xsd:schema
+        xmlns="http://ds.young.turbo/schema"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://ds.young.turbo/schema">
+
+    <xsd:complexType name="procotol-type">
+        <xsd:attribute name="procotol" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 协议 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="port" type="xsd:int">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 协议端口 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="serialize" type="xsd:string">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ 序列化 ]]></xsd:documentation>
+        </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="stragety" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 路由策略 ]]></xsd:documentation>
+            </xsd:annotation>
+         </xsd:attribute>
+        <xsd:attribute name="role" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 角色 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="address" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 注册中心地址 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+
+    <xsd:element name="procotol" type="procotol-type">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ 协议 ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:complexType name="application-type">
+        <xsd:attribute name="name" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 应用名称 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="application" type="application-type">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ 应用 ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:complexType name="consumer-type">
+        <xsd:attribute name="interfaces" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 接口全限定名 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="ref" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 引用实现 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="timeout" type="xsd:int">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 超时时间 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="consumer" type="consumer-type">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ 服务调用者 ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+
+    <xsd:complexType name="provider-type">
+        <xsd:attribute name="interfaces" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 接口全限定名 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="impl" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 实现全限定名 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="provider" type="provider-type">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ 服务生产者 ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+</xsd:schema>

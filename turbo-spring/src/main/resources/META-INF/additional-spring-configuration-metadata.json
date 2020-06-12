@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "spring.turbo.zkServer",
+      "type": "java.lang.String",
+      "description": "Description for spring.turbo.zkServer."
+    },
+    {
+      "name": "spring.turbo.version",
+      "type": "java.lang.String",
+      "description": "Description for spring.turbo.version."
+    }
+  ]
+}
