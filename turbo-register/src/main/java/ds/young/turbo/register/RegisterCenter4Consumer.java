@@ -25,4 +25,5 @@ public interface RegisterCenter4Consumer {
      * @param invokers
      */
     public void registerConsumer(final List<RegisterInfoConsumer> invokers);
+
 }
