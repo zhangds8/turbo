@@ -24,7 +24,7 @@
         <jcl_version>1.2</jcl_version>
         <log4j_version>1.2.16</log4j_version>
         <logback_version>1.2.2</logback_version>
-        <log4j2_version>2.11.1</log4j2_version>
+        <log4j2_version>2.15.0</log4j2_version>
         <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
         <netty.version>4.1.42.Final</netty.version>
     </properties>
